@@ -32,3 +32,21 @@ def scan_network(ip_range):
         })
     
     return devices
+
+import socket
+
+def scan_ports(ip_address):
+    # Port yang umum kita cek (Web, SSH, FTP, dll)
+    common_ports = [21, 22, 23, 80, 443, 8080, 3306]
+    open_ports = []
+    
+    for port in common_ports:
+        # Membuat socket TCP
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(0.5) # Cepat saja, kalau 0.5 detik gak respon berarti tutup
+        result = s.connect_ex((ip_address, port))
+        if result == 0:
+            open_ports.append(port)
+        s.close()
+    
+    return open_ports if open_ports else ["None"]

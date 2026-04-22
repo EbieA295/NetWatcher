@@ -32,3 +32,16 @@
 [2026-04-22 16:54:18] ALERT: Perangkat Asing! IP: 192.168.100.32, MAC: 4c:2f:7b:64:f9:a5, Vendor: AltoBeam Inc.
 [2026-04-22 16:54:18] ALERT: Perangkat Asing! IP: 192.168.100.98, MAC: a4:f8:41:4f:fa:ef, Vendor: Apple, Inc.
 [2026-04-22 16:54:18] ALERT: Perangkat Asing! IP: 192.168.100.61, MAC: 1a:a2:dd:52:66:d9, Vendor: Unknown
+[2026-04-22 17:06:47] ALERT: Perangkat Asing! IP: 192.168.100.1, MAC: 8c:e5:ef:3b:ad:83, Vendor: HUAWEI TECHNOLOGIES CO.,LTD
+[2026-04-22 17:06:47] ALERT: Perangkat Asing! IP: 192.168.100.22, MAC: 38:54:f5:0c:82:2b, Vendor: Unknown
+[2026-04-22 17:06:47] ALERT: Perangkat Asing! IP: 192.168.100.98, MAC: a4:f8:41:4f:fa:ef, Vendor: Apple, Inc.
+[2026-04-22 17:06:47] ALERT: Perangkat Asing! IP: 192.168.100.61, MAC: 1a:a2:dd:52:66:d9, Vendor: Unknown
+[2026-04-22 17:06:47] ALERT: Perangkat Asing! IP: 192.168.100.243, MAC: 38:54:f5:98:df:57, Vendor: AltoBeam Inc.
+[2026-04-22 17:06:47] ALERT: Perangkat Asing! IP: 192.168.100.32, MAC: 4c:2f:7b:64:f9:a5, Vendor: Unknown
+[2026-04-22 17:10:29] ALERT: Perangkat Asing! IP: 192.168.100.1, MAC: 8c:e5:ef:3b:ad:83, Vendor: HUAWEI TECHNOLOGIES CO.,LTD
+[2026-04-22 17:10:29] ALERT: Perangkat Asing! IP: 192.168.100.22, MAC: 38:54:f5:0c:82:2b, Vendor: AltoBeam Inc.
+[2026-04-22 17:10:29] ALERT: Perangkat Asing! IP: 192.168.100.32, MAC: 4c:2f:7b:64:f9:a5, Vendor: Unknown
+[2026-04-22 17:10:30] ALERT: Perangkat Asing! IP: 192.168.100.98, MAC: a4:f8:41:4f:fa:ef, Vendor: Apple, Inc.
+[2026-04-22 17:10:30] ALERT: Perangkat Asing! IP: 192.168.100.243, MAC: 38:54:f5:98:df:57, Vendor: Unknown
+[2026-04-22 17:10:31] ALERT: Perangkat Asing! IP: 192.168.100.61, MAC: 1a:a2:dd:52:66:d9, Vendor: Unknown
+[2026-04-22 17:10:33] ALERT: Perangkat Asing! IP: 192.168.100.44, MAC: 2a:1d:1a:d8:02:96, Vendor: Unknown
