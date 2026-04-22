@@ -16,7 +16,8 @@ def scan_network(ip_range):
     arp_request = ARP(pdst=ip_range)
     broadcast = Ether(dst="ff:ff:ff:ff:ff:ff")
     combined_packet = broadcast / arp_request
-    answered_list = srp(combined_packet, timeout=2, verbose=False)[0]
+    # timeout dinaikkan ke 4 atau 5, dan kita tambahkan retry
+    answered_list = srp(combined_packet, timeout=4, retry=1, verbose=False)[0]
     
     devices = []
     for element in answered_list:

@@ -5,24 +5,51 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-900 text-white p-10">
-    <h1 class="text-3xl font-bold text-emerald-400 mb-5">Net-Watcher Dashboard</h1>
-    <div class="bg-gray-800 p-5 rounded-lg">
+    <div class="flex justify-between items-center mb-5">
+        <h1 class="text-3xl font-bold text-emerald-400">Net-Watcher Dashboard</h1>
+        <div id="status" class="text-sm text-gray-400 font-mono italic">Memperbarui dalam 15s...</div>
+    </div>
+
+    <div class="bg-gray-800 p-5 rounded-lg shadow-2xl border border-gray-700">
         <table class="w-full">
             <thead>
-                <tr class="border-b border-gray-700 text-emerald-400">
+                <tr class="border-b border-gray-700 text-emerald-400 text-sm uppercase">
                     <th class="text-left py-3">IP Address</th>
                     <th class="text-left py-3">MAC Address</th>
-                    <th class="text-left py-3">Vendor / Merk</th> </tr>
+                    <th class="text-left py-3">Vendor / Merk</th>
+                    <th class="text-left py-3 text-center">Security Status</th>
+                </tr>
             </thead>
             <tbody>
                 {% for d in devices %}
                 <tr class="border-b border-gray-700 hover:bg-gray-750 transition-colors">
                     <td class="py-3 font-mono">{{ d.ip }}</td>
                     <td class="py-3 font-mono text-sm text-gray-400">{{ d.mac }}</td>
-                    <td class="py-3 text-sm text-emerald-100 italic">{{ d.vendor }}</td> </tr>
+                    <td class="py-3 text-sm text-gray-200">{{ d.vendor }}</td>
+                    <td class="py-3 text-center">
+                        {% if d.status == "Known" %}
+                        <span class="px-3 py-1 bg-blue-900/40 text-blue-400 text-xs rounded-full border border-blue-500/50">My Device</span>
+                        {% else %}
+                        <span class="px-3 py-1 bg-red-900/40 text-red-400 text-xs rounded-full border border-red-500/50 animate-pulse">Unknown Device</span>
+                        {% endif %}
+                    </td>
+                </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+
+    <script>
+        let seconds = 15;
+        const statusEl = document.getElementById('status');
+        
+        setInterval(() => {
+            seconds--;
+            statusEl.innerText = `Memperbarui dalam ${seconds}s...`;
+            if (seconds <= 0) {
+                location.reload();
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
